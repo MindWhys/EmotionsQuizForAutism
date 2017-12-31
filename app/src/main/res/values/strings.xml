@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Emotions Quiz for Autism</string>
+    <string name="question_one">Question One</string>
+    <string name="question_two">Question Two</string>
+    <string name="question_three">Question Three</string>
+    <string name="question_four">Question Four</string>
+    <string name="question_five">Question Five</string>
+    <string name="question_six">Question Six</string>
+    <string name="question_seven">Question Seven</string>
+    <string name="how_feeling">How is this person feeling?</string>
+    <string name="happy">Happy</string>
+    <string name="sad">Sad</string>
+    <string name="angry">Angry</string>
+    <string name="scared">Scared</string>
+    <string name="excited">Excited</string>
+    <string name="total">Total</string>
+
+    <string-array name="emotions_array">
+        <item>Happy</item>
+        <item>Sad</item>
+        <item>Angry</item>
+        <item>Scared</item>
+        <item>Excited</item>
+    </string-array>
+</resources>
