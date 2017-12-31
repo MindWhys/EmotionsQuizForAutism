@@ -8,268 +8,357 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimaryLightest">
 
         <TextView
             android:id="@+id/question_one"
-            android:layout_alignParentTop="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question_one"
-            android:textAppearance="@style/CodeFont"
+            android:layout_alignParentTop="true"
             android:layout_margin="@dimen/margin"
-            />
+            android:text="@string/question_one"
+            android:textAppearance="@style/CodeFont" />
 
         <ImageView
             android:id="@+id/smiley"
-            android:layout_below="@id/question_one"
-            android:src="@drawable/blue_smiley"
-            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_below="@id/question_one"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/blue_smiley" />
 
         <Button
             android:id="@+id/button_happy"
-            android:onClick="happy1"
-            android:layout_below="@id/smiley"
-            android:layout_centerHorizontal="true"
-            android:text="@string/happy"
-            android:textAllCaps="false"
-            android:textAppearance="@style/CodeFont"
             android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
+            android:layout_below="@id/smiley"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
             android:background="@drawable/buttons"
-            android:layout_margin="@dimen/margin"/>
+            android:onClick="happy1"
+            android:text="@string/happy"
+            android:textAllCaps="false"
+            android:textAppearance="@style/CodeFont" />
 
         <Button
             android:id="@+id/button_sad"
-            android:onClick="happy2"
-            android:layout_below="@id/button_happy"
-            android:layout_centerHorizontal="true"
-            android:text="@string/sad"
-            android:textAllCaps="false"
-            android:textAppearance="@style/CodeFont"
             android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
+            android:layout_below="@id/button_happy"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
             android:background="@drawable/buttons"
-            android:layout_margin="@dimen/margin"/>
+            android:onClick="happy2"
+            android:text="@string/sad"
+            android:textAllCaps="false"
+            android:textAppearance="@style/CodeFont" />
 
         <TextView
             android:id="@+id/question_two"
-            android:layout_below="@id/button_sad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/button_sad"
+            android:layout_margin="@dimen/margin"
             android:text="@string/question_two"
             android:textAppearance="@style/CodeFont"
-            android:layout_margin="@dimen/margin"
-            android:textSize="@dimen/textSize"
-            />
+            android:textSize="@dimen/textSize" />
 
         <ImageView
             android:id="@+id/smiley2"
-            android:layout_below="@id/question_two"
-            android:src="@drawable/sad_boy"
-            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_below="@id/question_two"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/sad_boy" />
 
         <TextView
             android:id="@+id/how_feeling_2"
-            android:layout_below="@id/smiley2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/smiley2"
+            android:layout_margin="@dimen/margin"
             android:text="@string/how_feeling"
             android:textAppearance="@style/CodeFont"
-            android:layout_margin="@dimen/margin"
-            android:textSize="@dimen/textSize"
-            />
+            android:textSize="@dimen/textSize" />
 
         <RadioGroup
             android:id="@+id/radio_group_1"
-            android:layout_below="@id/how_feeling_2"
-            android:layout_centerHorizontal="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/blueLightest"
+            android:layout_below="@id/how_feeling_2"
+            android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:background="@color/blueLightest"
             android:orientation="horizontal"
             android:textAppearance="@style/CodeFont">
-            <RadioButton android:id="@+id/radio_happy"
+
+            <RadioButton
+                android:id="@+id/radio_happy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/happy"
                 android:textAppearance="@style/CodeFont"
-                android:textColor="@color/blueDarkest"
-                android:layout_margin="@dimen/margin"
-                android:onClick="onRadioButtonClicked"/>
-            <RadioButton android:id="@+id/radio_sad"
+                android:textColor="@color/blueDarkest" />
+
+            <RadioButton
+                android:id="@+id/radio_sad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/sad"
-                android:textColor="@color/blueDarkest"
-                android:layout_margin="@dimen/margin"
                 android:textAppearance="@style/CodeFont"
-                android:onClick="onRadioButtonClicked"/>
-            <RadioButton android:id="@+id/radio_angry"
+                android:textColor="@color/blueDarkest" />
+
+            <RadioButton
+                android:id="@+id/radio_angry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/angry"
-                android:textColor="@color/blueDarkest"
                 android:layout_margin="@dimen/margin"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/angry"
                 android:textAppearance="@style/CodeFont"
-                android:onClick="onRadioButtonClicked"/>
+                android:textColor="@color/blueDarkest" />
         </RadioGroup>
 
         <Button
             android:id="@+id/button_total"
-            android:onClick="total"
-            android:layout_below="@id/radio_group_1"
-            android:layout_centerHorizontal="true"
-            android:text="@string/total"
-            android:textAllCaps="false"
-            android:textAppearance="@style/CodeFont"
             android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
+            android:layout_below="@id/radio_group_1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
             android:background="@drawable/buttons"
-            android:layout_margin="@dimen/margin"/>
+            android:onClick="total"
+            android:text="@string/total"
+            android:textAllCaps="false"
+            android:textAppearance="@style/CodeFont" />
 
         <TextView
             android:id="@+id/question_three"
-            android:layout_below="@id/button_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/button_total"
+            android:layout_margin="@dimen/margin"
             android:text="@string/question_three"
             android:textAppearance="@style/CodeFont"
-            android:layout_margin="@dimen/margin"
-            android:textSize="@dimen/textSize"
-            />
+            android:textSize="@dimen/textSize" />
 
         <ImageView
             android:id="@+id/smiley3"
-            android:layout_below="@id/question_three"
-            android:src="@drawable/angry_girl"
-            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="250dp"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_below="@id/question_three"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/angry_girl" />
 
         <TextView
             android:id="@+id/how_feeling_3"
-            android:layout_below="@id/smiley3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/smiley3"
+            android:layout_margin="@dimen/margin"
             android:text="@string/how_feeling"
             android:textAppearance="@style/CodeFont"
-            android:layout_margin="@dimen/margin"
-            android:textSize="@dimen/textSize"
-            />
+            android:textSize="@dimen/textSize" />
 
         <RadioGroup
             android:id="@+id/radio_group_2"
-            android:layout_below="@id/how_feeling_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/how_feeling_3"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin40"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginStart="@dimen/margin40"
+            android:layout_marginTop="@dimen/margin"
             android:background="@color/blueLightest"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
             android:orientation="vertical"
             android:textAppearance="@style/CodeFont">
-            <RadioButton android:id="@+id/radio_happy2"
+
+            <RadioButton
+                android:id="@+id/radio_happy2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:onClick="combinedClick"
                 android:text="@string/happy"
                 android:textAppearance="@style/CodeFont"
-                android:textColor="@color/blueDarkest"
-                android:layout_margin="@dimen/margin"
-                android:onClick="combinedClick"/>
+                android:textColor="@color/blueDarkest" />
 
-            <RadioButton android:id="@+id/radio_sad2"
+            <RadioButton
+                android:id="@+id/radio_sad2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sad"
-                android:textColor="@color/blueDarkest"
                 android:layout_margin="@dimen/margin"
+                android:onClick="combinedClick"
+                android:text="@string/sad"
                 android:textAppearance="@style/CodeFont"
-                android:onClick="combinedClick"/>
+                android:textColor="@color/blueDarkest" />
         </RadioGroup>
 
         <RadioGroup
             android:id="@+id/radio_group_3"
-            android:layout_below="@id/how_feeling_3"
-            android:layout_toEndOf="@id/radio_group_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/blueLightest"
+            android:layout_below="@id/how_feeling_3"
             android:layout_margin="@dimen/margin"
+            android:layout_toEndOf="@id/radio_group_2"
+            android:layout_toRightOf="@id/radio_group_2"
+            android:background="@color/blueLightest"
             android:orientation="vertical"
-            android:textAppearance="@style/CodeFont"
-            android:layout_toRightOf="@id/radio_group_2">
+            android:textAppearance="@style/CodeFont">
 
-            <RadioButton android:id="@+id/radio_angry2"
+            <RadioButton
+                android:id="@+id/radio_angry2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:onClick="combinedClick"
                 android:text="@string/angry"
-                android:textColor="@color/blueDarkest"
-                android:layout_margin="@dimen/margin"
                 android:textAppearance="@style/CodeFont"
-                android:onClick="combinedClick"/>
+                android:textColor="@color/blueDarkest" />
 
-            <RadioButton android:id="@+id/radio_scared"
+            <RadioButton
+                android:id="@+id/radio_scared"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/scared"
-                android:textColor="@color/blueDarkest"
                 android:layout_margin="@dimen/margin"
+                android:onClick="combinedClick"
+                android:text="@string/scared"
                 android:textAppearance="@style/CodeFont"
-                android:onClick="combinedClick"/>
+                android:textColor="@color/blueDarkest" />
         </RadioGroup>
 
         <TextView
             android:id="@+id/question_four"
-            android:layout_below="@id/radio_group_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/radio_group_2"
+            android:layout_margin="@dimen/margin"
             android:text="@string/question_four"
             android:textAppearance="@style/CodeFont"
-            android:layout_margin="@dimen/margin"
-            android:textSize="@dimen/textSize"
-            />
+            android:textSize="@dimen/textSize" />
 
         <ImageView
             android:id="@+id/smiley4"
-            android:layout_below="@id/question_four"
-            android:src="@drawable/scared_baby"
-            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="250dp"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_below="@id/question_four"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/scared_baby" />
 
         <TextView
             android:id="@+id/how_feeling_4"
-            android:layout_below="@id/smiley4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/smiley4"
+            android:layout_margin="@dimen/margin"
             android:text="@string/how_feeling"
             android:textAppearance="@style/CodeFont"
-            android:layout_margin="@dimen/margin"
-            android:textSize="@dimen/textSize"
-            />
+            android:textSize="@dimen/textSize" />
 
         <Spinner
             android:id="@+id/emotions_spinner"
-            android:layout_below="@id/how_feeling_4"
             android:layout_width="fill_parent"
-            android:textColor="@color/blueDarkest"
-            android:background="@color/blueLightest"
             android:layout_height="wrap_content"
+            android:layout_below="@id/how_feeling_4"
             android:layout_margin="@dimen/margin"
-            android:textAppearance="@style/CodeFont"/>
+            android:background="@color/blueLightest"
+            android:textAppearance="@style/CodeFont"
+            android:textColor="@color/blueDarkest" />
+
+        <TextView
+            android:id="@+id/question_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emotions_spinner"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/question_five"
+            android:textAppearance="@style/CodeFont"
+            android:textSize="@dimen/textSize" />
+
+        <ImageView
+            android:id="@+id/smiley5"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_below="@id/question_five"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/excited_elf" />
+
+        <TextView
+            android:id="@+id/how_feeling_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smiley5"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/two_emotions"
+            android:textAppearance="@style/CodeFont"
+            android:textSize="@dimen/textSize" />
+
+        <CheckBox
+            android:id="@+id/checkbox_happy"
+            android:layout_width="@dimen/checkboxWidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/how_feeling_5"
+            android:text="@string/happy"
+            android:onClick="onCheckboxClicked"
+            android:background="@color/blueLightest"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin30"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:textAppearance="@style/CodeFont"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_sad"
+            android:layout_width="@dimen/checkboxWidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkbox_happy"
+            android:text="@string/sad"
+            android:onClick="onCheckboxClicked"
+            android:background="@color/blueLightest"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin30"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginStart="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin"
+            android:textAppearance="@style/CodeFont"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_angry"
+            android:layout_width="@dimen/checkboxWidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/how_feeling_5"
+            android:layout_toRightOf="@id/checkbox_happy"
+            android:text="@string/angry"
+            android:onClick="onCheckboxClicked"
+            android:background="@color/blueLightest"
+            android:layout_margin="@dimen/margin"
+            android:textAppearance="@style/CodeFont"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_excited"
+            android:layout_width="@dimen/checkboxWidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkbox_angry"
+            android:layout_toRightOf="@id/checkbox_sad"
+            android:text="@string/excited"
+            android:onClick="onCheckboxClicked"
+            android:background="@color/blueLightest"
+            android:layout_margin="@dimen/margin"
+            android:textAppearance="@style/CodeFont"
+            />
 
     </RelativeLayout>
 

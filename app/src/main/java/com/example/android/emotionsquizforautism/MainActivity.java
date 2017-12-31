@@ -5,17 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     int total_score = 0;
     int score1 = 0;
     int score2 = 0;
     int score3 = 0;
     int score4 = 0;
+    int score5 = 0;
 
     Spinner spinner;
     ArrayAdapter<CharSequence> adapter;
@@ -87,8 +89,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void total(View view) {
-        total_score = score1 + score2 + score3 + score4;
-        Toast.makeText(getApplicationContext(), "Well Done! You scored: " + total_score,
+        boolean happyChecked = ((CheckBox) findViewById(R.id.checkbox_happy)).isChecked();
+        boolean sadChecked = ((CheckBox) findViewById(R.id.checkbox_sad)).isChecked();
+        boolean angryChecked = ((CheckBox) findViewById(R.id.checkbox_angry)).isChecked();
+        boolean excitedChecked = ((CheckBox) findViewById(R.id.checkbox_excited)).isChecked();
+        if (happyChecked && excitedChecked && !sadChecked && !angryChecked){
+            score5 = 1;
+        } else {
+            score5 = 0;
+        }
+        total_score = score1 + score2 + score3 + score4 + score5;
+        Toast.makeText(getApplicationContext(),  "Well Done! You scored: " + total_score,
                 Toast.LENGTH_SHORT).show();
     }
 
@@ -128,10 +139,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String sSelected = parent.getItemAtPosition(position).toString();
-        if (position == 3) {
+        if (position == 4) {
             score4 = 1;
             Toast.makeText(this, "Well Done! " + sSelected + " is correct.", Toast.LENGTH_SHORT).show();
-        } else {
+        } else if (position > 0){
             score4 = 0;
             Toast.makeText(this, "Good Try! " + sSelected + " is almost right.", Toast.LENGTH_SHORT).show();
         }
@@ -141,4 +152,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
         score4 = 0;
     }
+
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which checkbox was clicked
+        switch (view.getId()) {
+            case R.id.checkbox_happy:
+                if (checked)
+                Toast.makeText(this, "Well Done! They are happy", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.checkbox_sad:
+                if (checked)
+                Toast.makeText(this, "Good try. Sad people don't look like that.", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.checkbox_angry:
+                if (checked)
+                Toast.makeText(this, "Good try. Angry people don't look like that.", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.checkbox_excited:
+                if (checked)
+                Toast.makeText(this, "Well Done! They are excited", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 }
+

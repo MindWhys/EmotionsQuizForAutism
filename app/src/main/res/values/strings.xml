@@ -8,6 +8,7 @@
     <string name="question_six">Question Six</string>
     <string name="question_seven">Question Seven</string>
     <string name="how_feeling">How is this person feeling?</string>
+    <string name="two_emotions">Select two emotions</string>
     <string name="happy">Happy</string>
     <string name="sad">Sad</string>
     <string name="angry">Angry</string>
@@ -16,6 +17,7 @@
     <string name="total">Total</string>
 
     <string-array name="emotions_array">
+        <item>Select one</item>
         <item>Happy</item>
         <item>Sad</item>
         <item>Angry</item>
