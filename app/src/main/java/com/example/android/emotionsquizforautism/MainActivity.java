@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int score3 = 0;
     int score4 = 0;
     int score5 = 0;
+    int score6 = 0;
 
     Spinner spinner;
     ArrayAdapter<CharSequence> adapter;
@@ -88,20 +90,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-    public void total(View view) {
-        boolean happyChecked = ((CheckBox) findViewById(R.id.checkbox_happy)).isChecked();
-        boolean sadChecked = ((CheckBox) findViewById(R.id.checkbox_sad)).isChecked();
-        boolean angryChecked = ((CheckBox) findViewById(R.id.checkbox_angry)).isChecked();
-        boolean excitedChecked = ((CheckBox) findViewById(R.id.checkbox_excited)).isChecked();
-        if (happyChecked && excitedChecked && !sadChecked && !angryChecked){
-            score5 = 1;
-        } else {
-            score5 = 0;
-        }
-        total_score = score1 + score2 + score3 + score4 + score5;
-        Toast.makeText(getApplicationContext(),  "Well Done! You scored: " + total_score,
-                Toast.LENGTH_SHORT).show();
-    }
+
 
     public void combinedClick(View view) {
         //Clear any checks from both groups
@@ -177,5 +166,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
         }
     }
+
+    public void total(View view) {
+        boolean happyChecked = ((CheckBox) findViewById(R.id.checkbox_happy)).isChecked();
+        boolean sadChecked = ((CheckBox) findViewById(R.id.checkbox_sad)).isChecked();
+        boolean angryChecked = ((CheckBox) findViewById(R.id.checkbox_angry)).isChecked();
+        boolean excitedChecked = ((CheckBox) findViewById(R.id.checkbox_excited)).isChecked();
+        if (happyChecked && excitedChecked && !sadChecked && !angryChecked){
+            score5 = 1;
+        } else {
+            score5 = 0;
+        }
+
+        final EditText simpleEditText = (EditText) findViewById(R.id.editTextEmotions);
+        String strValue = simpleEditText.getText().toString();
+        String sad = "sad";
+        if (strValue.equals(sad)){
+            score6 = 1;
+        } else {
+            score6 = 0;
+        }
+
+        total_score = score1 + score2 + score3 + score4 + score5 + score6;
+        Toast.makeText(getApplicationContext(),  "Well Done! You scored: " + total_score,
+                Toast.LENGTH_SHORT).show();
+    }
+
 }
 

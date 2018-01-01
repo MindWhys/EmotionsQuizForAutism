@@ -9,6 +9,8 @@
     <string name="question_seven">Question Seven</string>
     <string name="how_feeling">How is this person feeling?</string>
     <string name="two_emotions">Select two emotions</string>
+    <string name="type_emotions">Type how they are feeling...</string>
+    <string name="happy_or_sad">happy or sad</string>
     <string name="happy">Happy</string>
     <string name="sad">Sad</string>
     <string name="angry">Angry</string>
