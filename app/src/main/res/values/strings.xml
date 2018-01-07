@@ -9,7 +9,9 @@
     <string name="question_seven">Question Seven</string>
     <string name="how_feeling">How is this person feeling?</string>
     <string name="two_emotions">Select two emotions</string>
-    <string name="type_emotions">Type how they are feeling...</string>
+    <string name="type_emotions">Type how they are feeling…</string>
+    <string name="take_photo">Take a photo of yourself looking happy</string>
+    <string name="check_if_happy">Adult: Click here if the photo is correct</string>
     <string name="happy_or_sad">happy or sad</string>
     <string name="happy">Happy</string>
     <string name="sad">Sad</string>

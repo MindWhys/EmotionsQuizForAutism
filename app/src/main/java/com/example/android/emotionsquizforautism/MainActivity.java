@@ -1,12 +1,22 @@
 package com.example.android.emotionsquizforautism;
 
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -28,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private RadioGroup rg2;
     private RadioGroup rg3;
 
+    private ImageView smiley7;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +59,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("score1", score1);
+        outState.putInt("score2", score2);
+        outState.putInt("score3", score3);
+        outState.putInt("score4", score4);
+        outState.putInt("score5", score5);
+        outState.putInt("score6", score6);
+        outState.putInt("total_score", total_score);
+    }
+
+    @Override public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        score1 = savedInstanceState.getInt("score1");
+        score2 = savedInstanceState.getInt("score2");
+        score3 = savedInstanceState.getInt("score3");
+        score4 = savedInstanceState.getInt("score4");
+        score5 = savedInstanceState.getInt("score5");
+        score6 = savedInstanceState.getInt("score6");
+        total_score = savedInstanceState.getInt("total_score");
     }
 
     public void happy1(View view) {
