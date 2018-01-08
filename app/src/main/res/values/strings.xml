@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Emotions Quiz for Autism</string>
+    <string name="smiley">A blue smiley face.</string>
+    <string name="smiley2">A boy holding his knees with mouth turned down.</string>
+    <string name="smiley3">A girl with crossed arms, a screwed up face and low eyebrows.</string>
+    <string name="smiley4">A baby with wide eyes, sucking on his bottom lip.</string>
+    <string name="smiley5">A man with a wide-mouthed smile and wide-open eyes.</string>
+    <string name="smiley6">A woman with eyebrows close together and down-turned eyes holding a piece of paper with a smile on it in front of her mouth.</string>
     <string name="question_one">Question One</string>
     <string name="question_two">Question Two</string>
     <string name="question_three">Question Three</string>

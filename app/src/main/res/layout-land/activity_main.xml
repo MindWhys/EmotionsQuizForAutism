@@ -21,16 +21,19 @@
 
         <ImageView
             android:id="@+id/smiley"
-            android:layout_width="260dp"
-            android:layout_height="260dp"
-            android:layout_below="@id/question_one"
+            android:layout_width="@dimen/width260"
+            android:layout_height="@dimen/width260"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/question_one"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley"
             android:src="@drawable/blue_smiley" />
+
         <Button
             android:id="@+id/button_happy"
             android:layout_width="@dimen/buttonWidth"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/height100"
             android:layout_below="@id/question_one"
             android:layout_margin="@dimen/margin"
             android:background="@drawable/buttons"
@@ -42,7 +45,7 @@
         <Button
             android:id="@+id/button_sad"
             android:layout_width="@dimen/buttonWidth"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/height100"
             android:layout_below="@id/button_happy"
             android:layout_margin="@dimen/margin"
             android:background="@drawable/buttons"
@@ -65,9 +68,11 @@
             android:id="@+id/smiley2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/question_two"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/question_two"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley2"
             android:src="@drawable/sad_boy" />
 
         <TextView
@@ -133,16 +138,18 @@
 
         <ImageView
             android:id="@+id/smiley3"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_below="@id/question_three"
+            android:layout_width="@dimen/width250"
+            android:layout_height="@dimen/width250"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/question_three"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley3"
             android:src="@drawable/angry_girl" />
 
         <TextView
             android:id="@+id/how_feeling_3"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
             android:layout_below="@id/question_three"
             android:layout_margin="@dimen/margin"
@@ -230,16 +237,18 @@
 
         <ImageView
             android:id="@+id/smiley4"
-            android:layout_width="300dp"
-            android:layout_height="250dp"
-            android:layout_below="@id/question_four"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/width250"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/question_four"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley4"
             android:src="@drawable/scared_baby" />
 
         <TextView
             android:id="@+id/how_feeling_4"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
             android:layout_below="@id/question_four"
             android:layout_margin="@dimen/margin"
@@ -249,7 +258,7 @@
 
         <Spinner
             android:id="@+id/emotions_spinner"
-            android:layout_width="270dp"
+            android:layout_width="@dimen/width270"
             android:layout_height="wrap_content"
             android:layout_below="@id/how_feeling_4"
             android:layout_margin="@dimen/margin"
@@ -269,11 +278,13 @@
 
         <ImageView
             android:id="@+id/smiley5"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_below="@id/question_five"
+            android:layout_width="@dimen/width250"
+            android:layout_height="@dimen/width250"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/question_five"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley5"
             android:src="@drawable/excited_elf" />
 
         <TextView
@@ -323,6 +334,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/how_feeling_5"
             android:layout_margin="@dimen/margin"
+            android:layout_toEndOf="@+id/checkbox_happy"
             android:layout_toRightOf="@id/checkbox_happy"
             android:background="@color/blueLightest"
             android:onClick="onCheckboxClicked"
@@ -335,6 +347,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/checkbox_angry"
             android:layout_margin="@dimen/margin"
+            android:layout_toEndOf="@+id/checkbox_sad"
             android:layout_toRightOf="@id/checkbox_sad"
             android:background="@color/blueLightest"
             android:onClick="onCheckboxClicked"
@@ -353,16 +366,18 @@
 
         <ImageView
             android:id="@+id/smiley6"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_below="@id/question_six"
+            android:layout_width="@dimen/width250"
+            android:layout_height="@dimen/width250"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/question_six"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley6"
             android:src="@drawable/sad_woman" />
 
         <TextView
             android:id="@+id/how_feeling_6"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
             android:layout_below="@id/question_six"
             android:layout_margin="@dimen/margin"
@@ -372,7 +387,7 @@
 
         <EditText
             android:id="@+id/editTextEmotions"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/buttonWidth"
             android:layout_height="wrap_content"
             android:layout_below="@id/how_feeling_6"
             android:layout_margin="@dimen/margin"

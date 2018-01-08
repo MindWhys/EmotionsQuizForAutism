@@ -1,22 +1,13 @@
 package com.example.android.emotionsquizforautism;
 
-import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
+
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -38,18 +29,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private RadioGroup rg2;
     private RadioGroup rg3;
 
-    private ImageView smiley7;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rg1 = (RadioGroup) findViewById(R.id.radio_group_1);
-        rg2 = (RadioGroup) findViewById(R.id.radio_group_2);
-        rg3 = (RadioGroup) findViewById(R.id.radio_group_3);
+        rg1 = findViewById(R.id.radio_group_1);
+        rg2 = findViewById(R.id.radio_group_2);
+        rg3 = findViewById(R.id.radio_group_3);
         rg1.clearCheck();
 
-        spinner = (Spinner) findViewById(R.id.emotions_spinner);
+        spinner = findViewById(R.id.emotions_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.emotions_array, R.layout.spinner_item);
@@ -73,7 +62,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         outState.putInt("total_score", total_score);
     }
 
-    @Override public void onRestoreInstanceState(Bundle savedInstanceState) {
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         score1 = savedInstanceState.getInt("score1");
         score2 = savedInstanceState.getInt("score2");
@@ -126,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
 
-
     public void combinedClick(View view) {
         //Clear any checks from both groups
         rg2.clearCheck();
@@ -166,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (position == 4) {
             score4 = 1;
             Toast.makeText(this, "Well Done! " + sSelected + " is correct.", Toast.LENGTH_SHORT).show();
-        } else if (position > 0){
+        } else if (position > 0) {
             score4 = 0;
             Toast.makeText(this, "Good Try! " + sSelected + " is almost right.", Toast.LENGTH_SHORT).show();
         }
@@ -185,19 +174,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (view.getId()) {
             case R.id.checkbox_happy:
                 if (checked)
-                Toast.makeText(this, "Well Done! They are happy", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Well Done! They are happy", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.checkbox_sad:
                 if (checked)
-                Toast.makeText(this, "Good try. Sad people don't look like that.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Good try. Sad people don't look like that.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.checkbox_angry:
                 if (checked)
-                Toast.makeText(this, "Good try. Angry people don't look like that.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Good try. Angry people don't look like that.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.checkbox_excited:
                 if (checked)
-                Toast.makeText(this, "Well Done! They are excited", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Well Done! They are excited", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -207,23 +196,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         boolean sadChecked = ((CheckBox) findViewById(R.id.checkbox_sad)).isChecked();
         boolean angryChecked = ((CheckBox) findViewById(R.id.checkbox_angry)).isChecked();
         boolean excitedChecked = ((CheckBox) findViewById(R.id.checkbox_excited)).isChecked();
-        if (happyChecked && excitedChecked && !sadChecked && !angryChecked){
+        if (happyChecked && excitedChecked && !sadChecked && !angryChecked) {
             score5 = 1;
         } else {
             score5 = 0;
         }
 
-        final EditText simpleEditText = (EditText) findViewById(R.id.editTextEmotions);
+        final EditText simpleEditText = findViewById(R.id.editTextEmotions);
         String strValue = simpleEditText.getText().toString();
         String sad = "sad";
-        if (strValue.equals(sad)){
+        if (strValue.equals(sad)) {
             score6 = 1;
         } else {
             score6 = 0;
         }
 
         total_score = score1 + score2 + score3 + score4 + score5 + score6;
-        Toast.makeText(getApplicationContext(),  "Well Done! You scored: " + total_score,
+        Toast.makeText(getApplicationContext(), "Well Done! You scored: " + total_score,
                 Toast.LENGTH_SHORT).show();
     }
 

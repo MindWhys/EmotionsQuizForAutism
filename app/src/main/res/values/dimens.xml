@@ -7,4 +7,8 @@
     <dimen name="textSize">30sp</dimen>
     <dimen name="buttonWidth">300dp</dimen>
     <dimen name="checkboxWidth">150dp</dimen>
+    <dimen name="width250">250dp</dimen>
+    <dimen name="width260">260dp</dimen>
+    <dimen name="width270">270dp</dimen>
+    <dimen name="height100">100dp</dimen>
 </resources>

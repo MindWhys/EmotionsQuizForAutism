@@ -26,6 +26,7 @@
             android:layout_below="@id/question_one"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley"
             android:src="@drawable/blue_smiley" />
 
         <Button
@@ -71,6 +72,7 @@
             android:layout_below="@id/question_two"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley2"
             android:src="@drawable/sad_boy" />
 
         <TextView
@@ -142,6 +144,7 @@
             android:layout_below="@id/question_three"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley3"
             android:src="@drawable/angry_girl" />
 
         <TextView
@@ -239,6 +242,7 @@
             android:layout_below="@id/question_four"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley4"
             android:src="@drawable/scared_baby" />
 
         <TextView
@@ -278,6 +282,7 @@
             android:layout_below="@id/question_five"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley5"
             android:src="@drawable/excited_elf" />
 
         <TextView
@@ -327,6 +332,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/how_feeling_5"
             android:layout_margin="@dimen/margin"
+            android:layout_toEndOf="@id/checkbox_happy"
             android:layout_toRightOf="@id/checkbox_happy"
             android:background="@color/blueLightest"
             android:onClick="onCheckboxClicked"
@@ -339,6 +345,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/checkbox_angry"
             android:layout_margin="@dimen/margin"
+            android:layout_toEndOf="@id/checkbox_sad"
             android:layout_toRightOf="@id/checkbox_sad"
             android:background="@color/blueLightest"
             android:onClick="onCheckboxClicked"
@@ -362,6 +369,7 @@
             android:layout_below="@id/question_six"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/smiley6"
             android:src="@drawable/sad_woman" />
 
         <TextView
