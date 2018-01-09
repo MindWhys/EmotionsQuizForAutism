@@ -25,6 +25,7 @@
     <string name="scared">Scared</string>
     <string name="excited">Excited</string>
     <string name="total">Total</string>
+    <string name="total_string">Well Done! You scored: %1$o</string>
 
     <string-array name="emotions_array">
         <item>Select one</item>

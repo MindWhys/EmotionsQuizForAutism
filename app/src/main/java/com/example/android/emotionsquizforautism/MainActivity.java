@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void happy1(View view) {
         score1 = 1;
-        Toast.makeText(getApplicationContext(), "Well Done! They are happy" + score1,
+        Toast.makeText(getApplicationContext(), "Well Done! They are happy",
                 Toast.LENGTH_SHORT).show();
     }
 
     public void happy2(View view) {
         score1 = 0;
-        Toast.makeText(getApplicationContext(), "Good try. Sad people do not smile" + score1,
+        Toast.makeText(getApplicationContext(), "Good try. Sad people do not smile",
                 Toast.LENGTH_SHORT).show();
     }
 
@@ -97,19 +97,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.radio_happy:
                 if (checked)
                     score2 = 0;
-                Toast.makeText(getApplicationContext(), "Good Try. Happy people smile." + score2,
+                Toast.makeText(getApplicationContext(), "Good Try. Happy people smile.",
                         Toast.LENGTH_SHORT).show();
                 break;
             case R.id.radio_sad:
                 if (checked)
                     score2 = 1;
-                Toast.makeText(getApplicationContext(), "Well Done! They are sad." + score2,
+                Toast.makeText(getApplicationContext(), "Well Done! They are sad.",
                         Toast.LENGTH_SHORT).show();
                 break;
             case R.id.radio_angry:
                 if (checked)
                     score2 = 0;
-                Toast.makeText(getApplicationContext(), "Good Try. Angry people look scary." + score2,
+                Toast.makeText(getApplicationContext(), "Good Try. Angry people look scary.",
                         Toast.LENGTH_SHORT).show();
                 break;
         }
@@ -127,22 +127,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (view.getId()) {
             case R.id.radio_happy2:
                 score3 = 0;
-                Toast.makeText(getApplicationContext(), "Good Try. Happy people smile." + score3,
+                Toast.makeText(getApplicationContext(), "Good Try. Happy people smile.",
                         Toast.LENGTH_SHORT).show();
                 break;
             case R.id.radio_sad2:
                 score3 = 0;
-                Toast.makeText(getApplicationContext(), "Good Try. Sad people cry." + score3,
+                Toast.makeText(getApplicationContext(), "Good Try. Sad people cry.",
                         Toast.LENGTH_SHORT).show();
                 break;
             case R.id.radio_angry2:
                 score3 = 1;
-                Toast.makeText(getApplicationContext(), "Well Done. They are angry" + score3,
+                Toast.makeText(getApplicationContext(), "Well Done. They are angry",
                         Toast.LENGTH_SHORT).show();
                 break;
             case R.id.radio_scared:
                 score3 = 0;
-                Toast.makeText(getApplicationContext(), "Good Try. Scared people hide" + score3,
+                Toast.makeText(getApplicationContext(), "Good Try. Scared people hide",
                         Toast.LENGTH_SHORT).show();
                 break;
         }
@@ -212,8 +212,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         total_score = score1 + score2 + score3 + score4 + score5 + score6;
-        Toast.makeText(getApplicationContext(), "Well Done! You scored: " + total_score,
-                Toast.LENGTH_SHORT).show();
+       Toast.makeText(this, this.getString(R.string.total_string, total_score), Toast.LENGTH_SHORT).show();
     }
 
 }
